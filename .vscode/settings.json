@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "soft_uart.h": "c",
+        "multi_key.h": "c"
+    }
+}
