@@ -43,14 +43,6 @@
 // <2=> 2位停止位
 #define SOFT_UART_STOP 0 //配置停止位
 
-// <q> PRINTF_EN  - printf使能
-// <i> 选择是否支持printf输出
-#define PRINTF_EN 1 // printf使能
-
-// <q> TRANSMIT_NBYTE_EN  - 发送多个字节函数使能
-// <i> 如果要使用soft_uart_Transmit_nByte() 函数，就要使能这里
-#define TRANSMIT_NBYTE_EN 1 // 发送多个字节函数使能
-
 
 // <<< end of configuration section >>>
 

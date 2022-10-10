@@ -202,7 +202,7 @@ void soft_uart_isr(void)
 #endif
 }
 
-#if TRANSMIT_NBYTE_EN || PRINTF_EN
+
 //软串口发送单个数据
 void soft_uart_Transmit_Byte(unsigned char ch)
 {
@@ -214,9 +214,8 @@ void soft_uart_Transmit_Byte(unsigned char ch)
     while (soft_uart.TI == 0)
         ;
 }
-#endif
 
-#if TRANSMIT_NBYTE_EN
+
 //软串口发送n个数据
 void soft_uart_Transmit_nByte(unsigned char *ch, unsigned char n)
 {
@@ -225,16 +224,14 @@ void soft_uart_Transmit_nByte(unsigned char *ch, unsigned char n)
         soft_uart_Transmit_Byte(*ch++);
     }
 }
-#endif
 
-#if PRINTF_EN
+
 //支持printf打印  系统中的putchar重定向
 char putchar(char c)
 {
     soft_uart_Transmit_Byte(c);
     return (c);
 }
-#endif
 
 //清除接收参数
 void soft_uart_clear_rx_parameter(void)
