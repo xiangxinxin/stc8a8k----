@@ -67,7 +67,7 @@ typedef struct
     unsigned char RI : 1;            //接收完成标志
     unsigned char tx_send_start : 1; //发送开始标志，将要发送的数据放入tx_SBUF后，将此位置1
     unsigned char tx_SBUF;           //数据缓冲区
-    unsigned char tx_send_cnt;       //
+    signed char tx_send_cnt;         //
     unsigned char tx_bit_cnt;        //
     SOFT_UART_STATE_T tx_state;      //串口状态
 
